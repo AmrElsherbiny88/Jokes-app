@@ -3,7 +3,7 @@
   export let data;
   export let form;
   $: obj = form != undefined ? form : data;
-  let Cate = "";
+  var Cate = "Programming";
   import {quintOut} from "svelte/easing";
   import {slide} from "svelte/transition";
 </script>
