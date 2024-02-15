@@ -33,7 +33,7 @@
   <!-- categorie options -->
   <div class="mt-2">
     <h1 class="h5">Select Joke Categorie :</h1>
-    <select class="select text-center ms-3" size="4" value="Programming">
+    <select class="select text-center ms-3" size="4" value={Cate}>
       <option value="Pun" on:click={() => (Cate = "Pun")}>Pun</option>
       <option value="Programming" on:click={() => (Cate = "Programming")}
         >Programming</option
