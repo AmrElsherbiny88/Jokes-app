@@ -63,15 +63,14 @@
     @apply variant-filled-error mt-5 rounded-md;
   }
   .select {
-    background-color: transparent;
-
+    background-color: transparent !important;
     outline: none;
     border: none;
     width: 60%;
   }
 
   option {
-    @apply variant-filled-error mt-5 rounded-md;
+    @apply variant-filled-error  rounded-md !important ; 
   }
 
   .card {

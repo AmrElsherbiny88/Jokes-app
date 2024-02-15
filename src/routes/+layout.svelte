@@ -11,7 +11,7 @@
 	}
 </style>
 
-<body data-theme={theme} class="container h-screen   " >
+<body data-theme={theme} class="h-screen" >
 	<div class="container-body" >
 		
 		<button
