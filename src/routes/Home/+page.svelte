@@ -30,16 +30,18 @@
   <!-- categorie options -->
   <div class="mt-2">
     <h1 class="h5">Select Joke Categorie :</h1>
-    <select class="select text-center ms-3" size="4" value="1">
-      <option value="Pun" on:click={() => (Cate = "Pun")}>Pun</option>
-      <option value="Programming" on:click={() => (Cate = "Programming")}
-        >Programming</option
+    <div class="catbtn-div">
+      <button class="px-4" on:click={() => (Cate = "Pun")}>Pun</button>
+      <button class="px-4"  on:click={() => (Cate = "Programming")}
+        >Programming</button
       >
-      <option value="Miscellaneous" on:click={() => (Cate = "Miscellaneous")}
-        >Misc</option
+      <button class="px-4" on:click={() => (Cate = "Miscellaneous")}
+        >Misc</button
       >
-      <option value="Dark" on:click={() => (Cate = "Dark")}>Dark</option>
-    </select>
+      <button class="px-4" on:click={() => (Cate = "Dark")}>Dark</button>
+   
+    </div>
+     
   </div>
 
   <!-- submit and get data and refetch from server -->
@@ -69,9 +71,7 @@
     width: 60%;
   }
 
-  option {
-    @apply variant-filled-error  rounded-md !important ; 
-  }
+ 
 
   .card {
     overflow: auto;
