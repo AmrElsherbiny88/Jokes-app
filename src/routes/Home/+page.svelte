@@ -29,7 +29,7 @@
 
   <!-- categorie options -->
   <div class="mt-2">
-    <h1 class="h5">Select Joke Categorie :</h1>
+    <h1 class="h5">Select Joke Category :</h1>
     <div class="catbtn-div">
       <button class="px-4" on:click={() => (Cate = "Pun")}>Pun</button>
       <button class="px-4"  on:click={() => (Cate = "Programming")}
@@ -49,7 +49,7 @@
     <form method="POST" action="?/getcat" use:enhance>
       <input type="hidden" id="categ" name="categ" value={Cate} />
       <button type="submit">
-        <h3 class="h5 p-3">Submit The Categorie</h3>
+        <h3 class="h5 p-3">Submit The Category</h3>
       </button>
     </form>
     <form method="POST" action="?/getjoke" use:enhance>
