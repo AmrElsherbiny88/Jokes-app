@@ -3,7 +3,7 @@
   export let data;
   export let form;
   $: obj = form != undefined ? form : data;
-  var Cate = " ";
+  var Cate = "Programming";
   import {quintOut} from "svelte/easing";
   import {slide} from "svelte/transition";
 </script>
@@ -49,7 +49,7 @@
     <form method="POST" action="?/getcat" use:enhance>
       <input type="hidden" id="categ" name="categ" value={Cate} />
       <button type="submit">
-        <h3 class="h5 p-3">Submit The Category <br> <span class="h6"> choosen category is: {cate} </span></h3>
+        <h3 class="h5 p-3">Submit The Category</h3>
       </button>
     </form>
     <form method="POST" action="?/getjoke" use:enhance>
