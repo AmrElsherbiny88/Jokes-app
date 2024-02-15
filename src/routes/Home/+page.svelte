@@ -3,11 +3,8 @@
   export let data;
   export let form;
   $: obj = form != undefined ? form : data;
-  let Cate = "programming";
-  import {fly} from "svelte/transition";
+  let Cate = "";
   import {quintOut} from "svelte/easing";
-  import {fade} from "svelte/transition";
-  import {scale} from "svelte/transition";
   import {slide} from "svelte/transition";
 </script>
 
