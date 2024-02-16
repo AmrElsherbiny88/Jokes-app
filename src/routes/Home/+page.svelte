@@ -3,7 +3,7 @@
   export let data;
   export let form;
   $: obj = form != undefined ? form : data;
-  var Cate = "Programming";
+  var Cate = " ";
   import {quintOut} from "svelte/easing";
   import {slide} from "svelte/transition";
 </script>
@@ -31,14 +31,14 @@
   <div class="mt-2">
     <h1 class="h5">Select Joke Category :</h1>
     <div class="catbtn-div">
-      <button class="px-4" on:click={() => (Cate = "Pun")}>Pun</button>
-      <button class="px-4"  on:click={() => (Cate = "Programming")}
+      <button class:active={Cate=="Pun"} class="px-4 py-1" on:click={() => (Cate = "Pun")}>Pun</button>
+      <button class:active={Cate=="Programming"}  class="px-4 py-1"  on:click={() => (Cate = "Programming")}
         >Programming</button
       >
-      <button class="px-4" on:click={() => (Cate = "Miscellaneous")}
+      <button class:active={Cate=="Miscellaneous"}  class="px-4 py-1" on:click={() => (Cate = "Miscellaneous")}
         >Misc</button
       >
-      <button class="px-4" on:click={() => (Cate = "Dark")}>Dark</button>
+      <button class:active={Cate=="Dark"}  class="px-4 py-1" on:click={() => (Cate = "Dark")}>Dark</button>
    
     </div>
      
@@ -53,7 +53,7 @@
       </button>
     </form>
     <form method="POST" action="?/getjoke" use:enhance>
-      <button type="submit">
+      <button on:click={()=> Cate=" " } type="submit">
         <h3 class="h5 p-3">Get Another Random Joke</h3>
       </button>
     </form>
@@ -71,6 +71,9 @@
     width: 60%;
   }
 
+ .active {
+  @apply variant-filled-warning mt-5 rounded-md;
+  }
  
 
   .card {
