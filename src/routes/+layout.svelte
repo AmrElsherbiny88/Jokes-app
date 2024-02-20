@@ -1,4 +1,5 @@
 <script>
+	import { enhance } from '$app/forms';
   import "../app.postcss";
   import "../App.css";
   import {LightSwitch} from "@skeletonlabs/skeleton";
@@ -6,8 +7,22 @@
   import {browser} from "$app/environment";
 </script>
 
-{#if browser}
-  <body data-theme={$theme} class="h-screen">
+ {#if !browser}
+
+ <div class="h-screen text-center justify-items-center bg-black ">
+   <h1 class="h1 text-white">loading.....</h1>
+ </div>
+   
+   
+   <style>
+    .body{
+      display:none;
+    }
+   </style>
+   
+ {/if} 
+
+  <body data-theme={$theme} class="h-screen body" >
     <div class="container-body">
       <button
         class="variant-glass-primary p-5"
@@ -37,7 +52,7 @@
     <LightSwitch class="togglee  mt-5 mb-5 " />
     <slot />
   </body>
-{/if}
+
 
 <style>
   .container-body {
