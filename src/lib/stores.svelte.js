@@ -3,12 +3,9 @@ export const theme = {
   // @ts-ignore
   setTheme(value) {
     if (browser) {
-      window.localStorage.setItem("theme", value);
+      document.body.setAttribute("data-theme", value);
+      //document.cookie = `theme=${value}`;
+      localStorage.setItem("theme", value);
     }
-  },
-  getTheme() {
-    return browser
-      ? window.localStorage.getItem("theme") ?? null
-      : "skeleton" || "gold-nouveau" || "modern" || "crimson";
   },
 };
