@@ -20,5 +20,8 @@
     "@skeletonlabs/tw-plugin": "0.4.0",
     "vite-plugin-tailwind-purgecss": "0.3.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.13"
+  }
 }
