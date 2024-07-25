@@ -24,7 +24,7 @@
   
 {/if} 
 
-<div data-theme={theme.getTheme()} class="h-screen body" >
+<div class="h-screen body" >
 	<div class="container-body">
 		<button
 		  class="variant-glass-primary p-5"
